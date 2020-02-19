@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 //imports 
-import {createStore} from 'redux';
+// import {createStore} from 'redux';
 import {connect} from 'react-redux';
 //import components
 import Header from './components/Header';
@@ -8,11 +8,11 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 //reducers
-import { featuresReducer} from './reducers/featuresReducer';
+// import { featuresReducer} from './reducers/featuresReducer';
 //actions
 import { addFeature, removeFeature, addFeaturePrice, removeFeaturePrice } from './actions/featuresAction';
 
-const store = createStore(featuresReducer);
+// const store = createStore(featuresReducer);
 // console.log(store.getState());
 
 const App = props => {
@@ -35,7 +35,7 @@ console.log('this is props',props);
     <div className="boxes">
       <div className="box">
         <Header car={props.car} additionalPrice={props.additionalPrice}/>
-        <AddedFeatures addFeature={props.addFeature} removeFeature={props.removeFeature} car={props.car} />
+        <AddedFeatures addFeature={props.addFeature} removeFeature={removeFeature} car={props.car} />
       </div>
       <div className="box">
         <AdditionalFeatures buyItem={buyItem} additionalFeatures={props.additionalFeatures} />
